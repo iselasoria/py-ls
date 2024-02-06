@@ -162,14 +162,16 @@ the variable? Which statements mutate the value of the object
 that obj references? Which statements do neither? 
 If necessary, you can read the documentation.
 """
+# starts as:
+obj = 42 
 
-obj = 'ABcd'      # Reassignment
-obj.upper()       # Neither
-obj = obj.lower() # Reassignment
+obj = 'ABcd'      # Reassignment -> 'ABcd'
+obj.upper()       # Neither -> .upper() returns a new value, but we don't capture it
+obj = obj.lower() # Reassignment -> 'abcd'
 print(len(obj))   # Neither
-obj = list(obj)   # Reassignment
-obj.pop()         # Mutation
-obj[2] = 'X'      # Mutation
-obj.sort()        # Mutation
-set(obj)          # Neither
-obj = tuple(obj)  # Reassignment
+obj = list(obj)   # Reassignment list() returns a new object, and we then make obj point to it ['a','b','c','d']
+obj.pop()         # Mutation -> .pop() mutates the object it is called on ['a','b','c']
+obj[2] = 'X'      # Mutation -> this is index reassignment, it may look like reassignment but is is not. Because it acts on and mutates the collection itself ['a','b','c','X']
+obj.sort()        # Mutation -> mutatin method, all capitals are greater than all their lowercase counterparts ['X','a','b']
+set(obj)          # Neither -> this created a new set ('X','a','b')
+obj = tuple(obj)  # Reassignment -> we point the variable to the value of the tuple constructor
