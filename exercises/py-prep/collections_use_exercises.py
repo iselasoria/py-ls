@@ -128,3 +128,65 @@ cats = {
 }
 
 print(cats['Pete']['Cocoa']['enjoys'])
+
+# 11 without runing, what shold each print?
+
+print({3, 2} in {1, frozenset({2, 3})}) # True 
+print('Joe J' in 'Joe Johnson') # True
+print(5 in range(5)) # False
+print(5 in range(6)) # True
+print(5 not in range(5, 10)) # False
+print(4  in {6, 5, 4, 3, 2, 1}) # True
+print('johnson' in 'Joe Johnson') # False
+print('sen' not in 'Joe Johnson') # True
+print(0 in range(10, 0, -1)) # True
+print({1, 2, 3} in {1, 2, 3}) # False not true for equality checks
+
+# 12 write some code that determines if the number 3 is found in each of the collections:
+
+numbers1 = [1, 3, 5, 7, 9, 11]
+numbers2 = []
+numbers3 = [2, 4, 6, 8]
+numbers4 = ['1', '3', '5']
+numbers5 = ['1', 3.0, '5']
+
+zippped_col = [numbers1, numbers2, numbers3, numbers4, numbers5]
+print(zippped_col)
+
+for col in zippped_col:
+    if 3 in col:
+        print('True')
+    else:
+        print('False')
+
+# 13
+# without running determine what each prints
+
+cats = ('Cocoa', 'Cheddar',
+        'Pudding', 'Butterscotch')
+
+print('Butterscotch' in cats) # True
+print('Butter' in cats) # False; it can't search for substr
+print('Butter' in cats[3]) # True; here inside the string, it can search for substr
+print('cheddar' in cats) # False
+
+# 14
+
+# assume the following
+
+my_str = 'abc'
+my_list = ['Alpha', 'Bravo', 'Charlie']
+my_tuple = (None, True, False)
+my_range = range(10, 60, 10)
+
+# 15
+# Write some code that combines the sequences into a list of tuples. Each tuple should contain one member of each sequence. Print the final result so you can see all the values, which should look like this:
+
+# should look like:
+# [('a', 'Alpha', None, 10),
+#  ('b', 'Bravo', True, 20),
+#  ('c', 'Charlie', False, 30)]
+
+zipped_col = zip(my_str, my_list, my_tuple, my_range)
+
+print(list(zipped_col))
