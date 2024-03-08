@@ -1,13 +1,17 @@
-# what will it print and why?
+# what will the code do and why?
 a = 1
 
 def my_function():
     print(a)
+    a = 2
 
 my_function()
 
-# global variable a is set to integer 1
-# a function is deinfed that makes a call to print with a passed in as an argument
-# Lastly, the my_funtion method gets called. Because the variable a is intialzied as a global variable, it is accessible 
-# inside the method definition as well. So this code will output 1. 
-# we can't reassign or make changes to a without using the global keyword but we can refrence it
+"""
+variable a is initialized and set to integer 1, then my_function gets defined and  inside the body definition, 
+it calls print with a passed in as an argument. The next line then attempts to reassign a to the integer 2. 
+Line 5, the call to print with a as the argument would work as use a with the value 1 as it comes in from global. The 
+issue is that since in the next line we attempt reassignment, python treats a now as a local varibale instead of a global
+For this reason, we will get an error thrown because we are attempting to reference a local variable a with a value of 2, 
+one line before we even define it.
+"""
