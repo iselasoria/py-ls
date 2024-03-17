@@ -1,4 +1,5 @@
 This directory containbs a subdirectory of each course in the LS curriculum. Each course directory, in turn, contains additional directories for each lesson or project in the course. There may be some classes in the future that require their own repository and those will be found outside of this one. The README file will be updated to list related courses and projects that are part of Core Curriculum but that are required to be a separate repo.
+
 ---
 ## Directory Breakdown
 
