@@ -1,4 +1,4 @@
-import time 
+import time
 
 def prompt(message):
     print(f'==> {message}')
