@@ -1,4 +1,4 @@
-import time 
+import time
 
 def prompt(message):
     print(f'==> {message}')
@@ -22,37 +22,46 @@ print('Welcome to Calculator!')
 
 time.sleep(2)
 print()
-# Ask the user for the first number
-prompt("What's the first number?")
-number1 = input()
 
-while invalid_number(number1):
-    prompt("Hmm... that doesn't look like a valid number.")
+
+## main loop mechanism starts here
+while True:
+    # Ask the user for the first number
+    prompt("What's the first number?")
     number1 = input()
 
+    while invalid_number(number1):
+        prompt("Hmm... that doesn't look like a valid number.")
+        number1 = input()
 
-prompt("What is the second number?")
-number2 = input()
 
-while invalid_number(number2):
-    prompt("Hmm... that doesn't look like a valid number.")
+    prompt("What is the second number?")
     number2 = input()
 
-prompt('What operation do you wan to perform? \n1)Add 2)Subtract 3)Multiply 4)Divide')
-operation = input()
+    while invalid_number(number2):
+        prompt("Hmm... that doesn't look like a valid number.")
+        number2 = input()
 
-while operation not in ["1", "2", "3", "4"]:
-    prompt('You must choose 1, 2, 3, or 4')
+    prompt('What operation do you wan to perform? \n1)Add 2)Subtract 3)Multiply 4)Divide')
     operation = input()
 
-match operation:
-    case '1':
-        output = int(number1) + int(number2)
-    case '2':
-        output = int(number1) - int(number2)
-    case '3':
-        output = int(number1) * int(number2)
-    case '4':
-        output = int(number1) // int(number2)
+    while operation not in ["1", "2", "3", "4"]:
+        prompt('You must choose 1, 2, 3, or 4')
+        operation = input()
 
-print(f'The result is {output}')
+    match operation:
+        case '1':
+            output = int(number1) + int(number2)
+        case '2':
+            output = int(number1) - int(number2)
+        case '3':
+            output = int(number1) * int(number2)
+        case '4':
+            output = int(number1) // int(number2)
+
+    print(f'The result is {output}')
+
+    prompt('Do you want to run another calculation? (y/n)')
+    user_decision = input()
+    if user_decision != 'y':
+        break
