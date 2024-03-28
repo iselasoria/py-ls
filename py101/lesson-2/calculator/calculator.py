@@ -1,8 +1,10 @@
 import time
 import json
 
+LANGUAGE = 'en'
+
 def prompt(message):
-    print(f'==> {message}')
+    print(f"==> {message}")
 
 def invalid_number(number_str):
     try:
@@ -12,10 +14,14 @@ def invalid_number(number_str):
 
     return False
 
+def messages(message, lang='en'):
+    return MESSAGES[lang][message]
+
+
 with open('messages.json','r') as file:
     MESSAGES = json.load(file)
 
-print(MESSAGES['welcome'])
+print(messages('welcome'))
 
 time.sleep(2)
 print()
