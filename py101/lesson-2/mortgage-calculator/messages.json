@@ -1,0 +1,5 @@
+{
+    "initial_amount_request" : "Hello, how much do you need to borrow today?",
+    "apr_request":"What is the APR on your loan?",
+    "duration_request":"What is the duration of your loan in years?"
+}
