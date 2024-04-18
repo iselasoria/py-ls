@@ -18,9 +18,6 @@ def win(first, second):
         print(WINNING_MOVES[first])
         return True
 
-    # if the first score is included as a key, and the second is included as a value
-    # this returns true for a win
-
 def display_winner(score1, score2):
     if win(score1, score2):
         print('The player wins this round!')
@@ -28,33 +25,38 @@ def display_winner(score1, score2):
         print('The computer wins this round!')
     else:
         print('We have a tie!')
-    # if when we pass player as the first arg to _win_ we get true
-        # then display the player won
-    # otherwise if the pass the scores swapped
-        # return that the computer on
-    # otherwise, return that it is a tie
 
-# def display_winner(player, computer):
-#     if ((player == 'rock' and computer == 'scissors') or
-#         (player == 'paper' and computer == 'rock') or
-#         (player == 'scissors' and computer == 'paper')):
-#         prompt('You win!')
-#     elif ((player == 'rock' and computer == 'paper') or
-#           (player == 'paper' and computer == 'scissors') or
-#           (player == 'scissors' and computer == 'rock')):
-#         prompt('Computer wins!')
-#     else:
-#         prompt('It\'s a tie!')
+def valid(choice):
+    print(f'The choice is {choice}')
+    print([option[0] for option in VALID_CHOICES])
+    print([option[0] for option in VALID_CHOICES])
+    if choice[0] in [option[0] for option in VALID_CHOICES]: #and choice[1] in [option[1] for option in VALID_CHOICES]):
+        return True
+    else:
+        return False
+
+def shorthand_convert(choice):
+    match choice:
+        case 'r':
+            return 'rock'
+        case 'p':
+            return 'paper'
+        case 'l':
+            return 'lizard'
+        case 'sp':
+            return 'spock'
+        case 'sc':
+            return 'scissors'
 
 
 while True:
 
     prompt(f'Choose one: {", ".join(VALID_CHOICES)}')
 
-    choice = input()
+    choice = shorthand_convert(input())
 
 
-    while choice not in VALID_CHOICES:
+    while not valid(choice):
         prompt('That\'s not a valid choice')
         choice = input()
 
