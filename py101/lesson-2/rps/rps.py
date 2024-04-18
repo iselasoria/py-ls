@@ -10,6 +10,11 @@ WINNING_MOVES = {
     'spock' : ['scissors','rock']
 }
 
+# score tracking
+user_score = []
+comp_score = []
+WINNING_SCORE = 3
+
 def prompt(msg):
     """Prompting mesage"""
     print(f'==> {msg}')
@@ -36,6 +41,7 @@ def valid(choice):
 
 def shorthand_convert(choice):
     """Converting shorthand input into full word"""
+    # ! minor bug when someone just enters 's'
     match choice:
         case 'r' | 'rock':
             return 'rock'
@@ -47,6 +53,16 @@ def shorthand_convert(choice):
             return 'spock'
         case 'sc' | 'spock':
             return 'scissors'
+
+def game_tally(first, second):
+    """Used to tally scores, no returns, no displays, just side effects"""
+    if second in WINNING_MOVES[first]:
+        user_score.append('win')
+    elif first in WINNING_MOVES[second]:
+        comp_score.append('win')
+
+
+
 
 
 while True:
@@ -64,10 +80,13 @@ while True:
 
     prompt(f'You chose: {choice}, the computer chose: {computer_choice}')
 
+    game_tally(choice, computer_choice)
+
     display_winner(choice, computer_choice)
 
     # break if the user doesnt want to play
     prompt('Do you want to play again (y/n)?')
+
     answer = input().lower()
     while True:
         if answer.startswith('n') or answer.startswith('y'):
@@ -75,5 +94,12 @@ while True:
         prompt('Please enter "y" or "n".')
         answer = input().lower()
 
+    if len(user_score) == WINNING_SCORE:
+        print('You won this match!')
+        break
+    elif len(comp_score) == WINNING_SCORE:
+        print('The computer wins the match!')
+        break
+# !minor bug when someone wins, come back to this.
     if answer[0]=='n':
         break
