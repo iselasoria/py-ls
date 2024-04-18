@@ -11,14 +11,16 @@ WINNING_MOVES = {
 }
 
 def prompt(msg):
+    """Prompting mesage"""
     print(f'==> {msg}')
 
 def win(first, second):
+    """Determining the winner of a round"""
     if second in WINNING_MOVES[first]:
-        print(WINNING_MOVES[first])
         return True
 
 def display_winner(score1, score2):
+    """Displaying the winner of the round"""
     if win(score1, score2):
         print('The player wins this round!')
     elif win(score2, score1):
@@ -27,25 +29,23 @@ def display_winner(score1, score2):
         print('We have a tie!')
 
 def valid(choice):
-    print(f'The choice is {choice}')
-    print([option[0] for option in VALID_CHOICES])
-    print([option[0] for option in VALID_CHOICES])
-    if choice[0] in [option[0] for option in VALID_CHOICES]: #and choice[1] in [option[1] for option in VALID_CHOICES]):
+    """Determining if the choice is valid"""
+    if choice[0] in [option[0] for option in VALID_CHOICES]:
         return True
-    else:
-        return False
+    return False
 
 def shorthand_convert(choice):
+    """Converting shorthand input into full word"""
     match choice:
-        case 'r':
+        case 'r' | 'rock':
             return 'rock'
-        case 'p':
+        case 'p' | 'paper':
             return 'paper'
-        case 'l':
+        case 'l' | 'lizard':
             return 'lizard'
-        case 'sp':
+        case 'sp' | 'spock':
             return 'spock'
-        case 'sc':
+        case 'sc' | 'spock':
             return 'scissors'
 
 
