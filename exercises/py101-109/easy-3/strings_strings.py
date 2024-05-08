@@ -26,17 +26,20 @@ Algo:
 """
 # ! TODO can this be further cleaned into a list comprehension?
 
+# def stringy(num):
+#     soon_tobe_str = []
+
+#     for idx in range(num):
+#         if idx & 1 == 0:
+#             soon_tobe_str.append('1')
+#         else:
+#             soon_tobe_str.append('0')
+
+#     return ''.join(soon_tobe_str)
+
 def stringy(num):
-    soon_tobe_str = []
 
-    for idx in range(num):
-        if idx & 1 == 0:
-            soon_tobe_str.append('1')
-        else:
-            soon_tobe_str.append('0')
-
-    return ''.join(soon_tobe_str)
-
+    return''.join(['1' if idx & 1 == 0 else '0' for idx in range(num)])
 
 print(stringy(6) == "101010")          # True
 print(stringy(9) == "101010101")        # True
