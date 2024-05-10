@@ -1,0 +1,143 @@
+{
+  "main": {
+    "id": "642d302c6addae2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1f5cd68728ef8da",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "py101/implicit_coercion.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "36cf857842eb8fc1",
+    "type": "split",
+    "children": [
+      {
+        "id": "eee14daff39ea404",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a11b603aa8b6314d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "1ac8e898966521da",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "42b8f6d0040bd317",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "65829185da487e8f",
+    "type": "split",
+    "children": [
+      {
+        "id": "a394272ad45b48a1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d9be7bf9155c4c91",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "py101/implicit_coercion.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b9571313e1379fa8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "py101/implicit_coercion.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0da5913905b4d723",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "545f5105ecd8b0cb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "py101/implicit_coercion.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "d1f5cd68728ef8da",
+  "lastOpenFiles": [
+    "py101/explicit_coercion.md",
+    "py101/operators.md",
+    "py101/implicit_coercion.md",
+    "py101/coercion.md",
+    "py101/numbers.md",
+    "py101/py_style_guide.md",
+    "py101/dictionary.md",
+    "py101/conditionals.md",
+    "py101/variables.md"
+  ]
+}
