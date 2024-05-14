@@ -17,3 +17,5 @@ Naming conventions for identifiers, including constants and class names:
 | **[[constants]]** | `WINNING_SCORE`     | Python constant naming conventions are advisory only.
 
 Indentation matters and it should be used as 4 spaces, not tabs.
+
+
