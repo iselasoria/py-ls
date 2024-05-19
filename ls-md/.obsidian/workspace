@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "py101/py_style_guide.md",
+            "file": "py101/dictionary.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "py101/py_style_guide.md",
+                "file": "py101/dictionary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "py101/py_style_guide.md",
+                "file": "py101/dictionary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "py101/py_style_guide.md"
+                "file": "py101/dictionary.md"
               }
             }
           }
@@ -130,14 +130,14 @@
   },
   "active": "d1f5cd68728ef8da",
   "lastOpenFiles": [
+    "py101/dictionary.md",
+    "py101/py_style_guide.md",
     "py101/explicit_coercion.md",
     "classes.md",
-    "py101/py_style_guide.md",
     "py101/operators.md",
     "py101/implicit_coercion.md",
     "py101/coercion.md",
     "py101/numbers.md",
-    "py101/dictionary.md",
     "py101/conditionals.md",
     "py101/variables.md"
   ]
