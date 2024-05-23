@@ -148,11 +148,13 @@
   },
   "active": "9802a37613319378",
   "lastOpenFiles": [
-    "py101/Untitled.md",
+    "py101/strings.md",
+    "py101/sequences.md",
+    "2024-05-21.md",
     "py101/string_methods.md",
+    "py101/Untitled.md",
     "py101/coercion.md",
     "`sequence`.md",
-    "py101/strings.md",
     "py101/tuple.md",
     "tuple.md",
     "Untitled.canvas",
@@ -162,7 +164,6 @@
     "string_methods.md",
     "sequence.md",
     "py101/thruthiness.md",
-    "py101/collections.md",
-    "py101/sequences.md"
+    "py101/collections.md"
   ]
 }
