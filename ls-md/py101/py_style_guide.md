@@ -1,6 +1,6 @@
 # Naming conventions
 
-Python follows a set of style guideliness, some of which are necessary.
+Python follows a set of style guidelines, some of which are necessary.
 Naming conventions for identifiers, including constants and class names:
 - use `snake_case`
 - names can contain underscores, lowercase letters, and numbers `0-9`

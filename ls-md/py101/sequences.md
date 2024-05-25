@@ -15,13 +15,13 @@ my_list = ['Rosa','Isela']
 print(my_list[1]) # 'Isela'
 ```
 
-- [[`range`]]
+- [[range]]
 ```python
 my_range = range(1, 30, 2)
 
 print(my_range[2]) # 5
 ```
-- [[`tuple`]]
+- [[tuple]]
 ```python
 my_tuple = ('Burbus','Espumin','Gotita', 'Gotita')
 

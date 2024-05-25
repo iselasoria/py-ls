@@ -157,7 +157,7 @@ surname = 'Soria'
 print(surname.upper()) # soria
 ```
 ## `.partition()`
-This method is called on a string and takes a string as an argument. It partitions the caller into three and returns a [[`tuple`]] with the argument string being the middle element in the new tuple.
+This method is called on a string and takes a string as an argument. It partitions the caller into three and returns a [[tuple]] with the argument string being the middle element in the new tuple.
 ```python
 str1 = 'onomatopeia'
 cat1 = 'Burbus'

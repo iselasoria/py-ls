@@ -1,0 +1,1 @@
+`input()` is a built-in method that intakes user input. This method will always intake anything as  [[strings]], so we should use [[coercion]] to get the values ingested into the appropriate data type.
