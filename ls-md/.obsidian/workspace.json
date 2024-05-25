@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "py101/string_methods.md",
+                "file": "py101/print.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "2bf1e9c4170d5ea1",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "py101/string_methods.md",
+                "file": "py101/print.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "py101/string_methods.md",
+                "file": "py101/print.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "py101/string_methods.md"
+                "file": "py101/print.md"
               }
             }
           }
@@ -148,11 +148,15 @@
   },
   "active": "9802a37613319378",
   "lastOpenFiles": [
+    "py101/statement.md",
+    "py101/print.md",
+    "py101/conditionals.md",
+    "py101/return.md",
+    "py101/none.md",
+    "py101/string_methods.md",
     "py101/strings.md",
     "py101/sequences.md",
     "2024-05-21.md",
-    "py101/string_methods.md",
-    "py101/Untitled.md",
     "py101/coercion.md",
     "`sequence`.md",
     "py101/tuple.md",

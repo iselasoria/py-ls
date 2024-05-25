@@ -1,5 +1,5 @@
 ## `interpolation`
-String interpolation is possible through `f-strings`.  String interpoation with f-strings is one way python does [[implicit_coercion]]. In the case of the integer referenced by variable `age`, when 
+String interpolation is possible through `f-strings`.  String interpolation with f-strings is one way python does [[implicit_coercion]]. In the case of the integer referenced by variable `age`, when 
 The construction of an f-string is as follows:
 ```python
 name = 'Isela'
@@ -51,6 +51,14 @@ Searches the string and returns the index of the first occurrence of the argumen
 name = 'Gotita'
 print(name.find('t')) # 2
 ```
+## `.rfind()`
+`.find()`  starts searching for the argument character from left to right, meaning from index 0 and forward. `.rfind()`, on the other hand, searches starting from the left hand side.
+```python
+kitty_cat = 'Gotita'
+
+print(kitty_cat.find('t')) # 2
+print(kitty_cat.rfind('t')) # 4
+```
 
 ## `.format()`
 This used to be used before direct string interpolation became possible via f-strings. The method is called on the string literal with `{}` for placeholder and then we pass the variable names in the order of appearance in the string.
@@ -93,30 +101,44 @@ print(cat1.isalpha()) # False
 Returns `True` if all the characters in the string are digits.
 ```python
 dob = '01011991'
-first_birthday = 'Jan 01 1991'
+first_birthday = 'Jan 01 1992'
 
 
 print(dob.isdigit()) # True
-print(first_birthday.isdigit()) # True
+print(first_birthday.isdigit()) # False
 ```
 
 ## `.islower()`
+Returns `True` if all the characters in the string are lowercase. 
 ```python
 str1 = 'onomatopeia'
 cat1 = 'Burbus'
+first_birthday = 'jan 01 1991'
 
 print(str1.islower()) # True
 print(cat1.islower()) # False
+print(first_birthday.islower()) # True 
 ```
 ## `.isupper()`
 This method returns `True` when all the characters in the string are uppercase letters.
 ```python
-dob = '01011991'
-first_birthday = 'Jan 01 1991'
+full_name = 'Rosa Isela Soria'
+initials = 'RIS'
 
-print(dob.isdigit())
-print(first_birthday.isdigit())
+print(full_name.isupper()) # False
+print(initials.isupper()) # True
 ```
+
+## `.isspace()`
+This method returns a boolean-- `True` if the string is all white space, `False` if the string contains any other character.
+```python
+sentence = 'A real sentece'
+just_space = ' '
+
+print(sentence.isspace()) # False
+print(just_space.isspace()) # True
+```
+
 ## `.join()`
 Converts the contents of an iterable and returns a new string. Must use a string as the separator.
 
@@ -146,6 +168,22 @@ print(cat1.partition('rb'))
 print(city1.partition('e'))
 ```
 
+## `.replace()`
+
+This method returns a new string with the specified phrase replaced by the specified replacer.
+By default, it will replace **all** the occurrences of the phrase. To override this, we must specify how many occurrences to replace by passing a third argument. 
+
+```python
+one_hundred_years = 'Many years later, as he faced the firing squad, Colonel Aureliano Buendia would remember the distant afternoon when his father took him to see ice.'
+
+print(one_hundred_years.replace('the', 'el'))
+print()
+print(one_hundred_years.replace('the', 'el', 2))
+
+# Many years later, as he faced el firing squad, Colonel Aureliano Buendia would remember el distant afternoon when his faelr took him to see ice.
+
+# Many years later, as he faced el firing squad, Colonel Aureliano Buendia would remember el distant afternoon when his father took him to see ice.
+```
 
 ## `.split()`
 This method uses a default argument of a blank space ` `  but can take any other separator, and returns a list containing each of the partitions made from the original string at the separator.
@@ -157,6 +195,31 @@ print(normal_string.split())
 print(uglier_string.split(','))
 # ['messy', 'string', 'with', "lot's", 'of', 'commas']
 ```
+
+
+## `.strip()`
+This method returns a new string with all the leading and trailing white space removed.
+```python
+normal_string = ' this is a normal string g'
+
+print(normal_string.strip()) # this is a normal string          g
+```
+
+
+## `.rstrip()` and  `.lstrip()`
+These methods do the same as strip, only they perform the stripping of the white space on a specified end of the string, right or left.
+
+```python
+normal_string = ' this is a normal string g'
+
+print(normal_string.strip())
+print(normal_string.rstrip())
+print(normal_string.lstrip())
+# this is a normal string          g
+       # this is a normal string          g
+# this is a normal string          g
+```
+
 ## `.swapcase()`
 This method will return a new string with the case swapped.
 ```python
