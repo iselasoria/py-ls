@@ -1,3 +1,8 @@
+---
+
+---
+#fundamentals
+
 Lists are one of several [[collections]] in Python. A list is a [[sequences]], which means it is indexed. Lists can be mutated after creation, and can contain any object in their elements, including other lists.
 
 ```python

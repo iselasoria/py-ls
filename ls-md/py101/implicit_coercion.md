@@ -41,3 +41,10 @@ print(3)          # 3
 print(False)      # False
 print([1,2,3])    # [1,2,3]
 ```
+
+> NOTE: Another way that explicit coercion happens is with [[[booleans]]]. `True` will resolve as integer `1` and `False` will resolve as integer `0`.
+
+```python
+print(True + True + True) # 3
+print(False * 10) # 0
+```

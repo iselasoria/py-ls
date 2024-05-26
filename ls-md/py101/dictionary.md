@@ -1,3 +1,4 @@
+#fundamentals
 Dictionaries are non-ordered collections that are composed of `key` /`value` pairs.
 ```python
 student = {

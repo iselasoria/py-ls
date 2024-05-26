@@ -1,3 +1,4 @@
+#fundamentals
 `for` loops iterate over a sequence such as [[lists]], [[strings]], [[tuple]] or [[range]]. The big benefit is you don't have to worry about indexing the runs or increasing a counter, they iterate for the number of elements in the [[collections]], unlike the [[while]] [[loops]] which rely on  [[conditionals]].
 
 `list`
