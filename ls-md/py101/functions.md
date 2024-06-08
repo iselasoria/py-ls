@@ -32,6 +32,6 @@ def happy_cat():
 
 print(happy_cat())
 ```
-Nested function make their local variables available to any inner functions. Since inner functions are at the end of the day, functions and as such they define their own [[scope#scope]], [[variables]] defined in the enclosing inner function will not be available to the outer function.
+Nested functions make their local variables available to any inner functions. Since inner functions are at the end of the day, functions and as such they define their own [[scope#scope]], [[variables]] defined in the enclosing inner function will not be available to the outer function.
 
 

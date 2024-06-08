@@ -68,7 +68,7 @@ print('FOO' != 'foo') # True (Case matters)
 ```
 
 ## `+` String Concatenation
-This operator looks like the arithmetic `+` operator but in reality it uses `+` to join two strings
+This operator looks like the arithmetic `+` operator but in reality it uses `+` to join two [[strings]]
 ```python
 '1' + '2'
 # '12'
@@ -86,3 +86,27 @@ print(3 * 'abc') # 'abcabcabc'
 
 # Comparison
 Strings are compared _lexicographically_-- character by character from left to right.
+
+# List Operators
+## Membership
+```python
+lst = [4,6,8]
+print(7 in lst) # False
+print(4 in lst) # True
+print(4 not in lst) # False
+```
+
+## Concatenation
+```python
+lst1 = [1,2,3]
+lst2 = [4,5,6]
+result = lst1 + lst2
+print(result) # [1,2,3,4,5,6]
+```
+
+## Repetition
+```python
+lst = [1,2]
+result = lst * 2 
+print(result) # [1,2,1,2]
+```

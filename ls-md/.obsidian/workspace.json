@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "6736ee01fa39b1b0",
+        "id": "5940597bb686543a",
         "type": "tabs",
         "children": [
           {
-            "id": "1e996ec3cbdf113f",
+            "id": "218b0f0a01ae92ff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "py101/operators.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "py101/operators.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "py101/operators.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "py101/operators.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,38 +138,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1e996ec3cbdf113f",
+  "active": "218b0f0a01ae92ff",
   "lastOpenFiles": [
+    "py101/identity.md",
+    "py101/pass_by_reference.md",
+    "py101/numbers.md",
+    "py101/collections.md",
+    "py101/strings.md",
+    "py101/string_methods.md",
+    "py101/lists_methods.md",
+    "py101/conditionals.md",
+    "py101/coercion.md",
+    "py101/arguments.md",
+    "py101/parameters.md",
+    "py101/methods.md",
+    "py101/lists.md",
     "py101/implicit_coercion.md",
+    "py101/identifiers.md",
+    "py101/functions.md",
+    "py101/explicit_coercion.md",
+    "py101/dictionary_methods.md",
+    "py101/presedence.md",
+    "py101/scope.md",
+    "py101/operators.md",
     "py101/expressions.md",
     "py101/statement.md",
-    "py101/operators.md",
     "Untitled.canvas",
     "py101/for.md",
     "py101/dictionary.md",
     "py101/return.md",
-    "explicit coercion.md",
-    "py101/explicit_coercion.md",
-    "py101/lists.md",
-    "py110/test note.md",
-    "py101/py_style_guide.md",
     "reassignment-visual.png",
     "py110",
     "py101/Untitled",
-    "py101/dictionary_methods.md",
-    "py101/identity.md",
-    "py101/mutability.md",
-    "py101/loops.md",
-    "py101/identifiers.md",
-    "py101/collections.md",
-    "py101/scope.md",
-    "py101/functions.md",
-    "py101/constants.md",
-    "py101/variables.md",
-    "py101/lists_methods.md",
-    "py101/string_methods.md",
-    "`tuple`.md",
-    "py101/sequences.md",
     "Untitled 1.canvas"
   ]
 }
