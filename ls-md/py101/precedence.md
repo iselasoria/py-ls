@@ -1,4 +1,5 @@
-Presedence in Python is the order in which expressions get evaluated.
+#fundamentals 
+Precedence in Python is the order in which expressions get evaluated.
 Python follows this order:
 
 | Operators                                                     | Meaning                          |

@@ -1,3 +1,5 @@
+#fundamentals 
+
 Implicit coercion often happens as the biproduct of running operations on numeric types.
 
 ```python

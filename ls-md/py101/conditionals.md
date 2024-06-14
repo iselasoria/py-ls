@@ -1,3 +1,4 @@
+#fundamentals 
 Conditionals are used to make decisions based on whether a condition is met or not.
 We can use `if` [[statement]]. 
 ```python

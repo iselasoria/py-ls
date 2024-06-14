@@ -1,3 +1,4 @@
+#fundamentals 
 ## scope
 Scope refers to the availability of variables at different indentation levels.
 The rules of scope in python can be remembered (in order) by:

@@ -1,3 +1,4 @@
+#fundamentals #strings
 ## `interpolation`
 String interpolation is possible through `f-strings`.  String interpolation with f-strings is one way python does [[implicit_coercion]]. In the case of the integer referenced by variable `age`, when 
 The construction of an f-string is as follows:
@@ -76,7 +77,7 @@ print("{} is a very cute kitty cat! So is {}.".format(name1, name2))
 
 ## `.isalnum()`
 
-This is used to check that the contents of a string are all numeric.
+This is used to check that the contents of a string are all alpha-numeric.
 
 ```python
 jersey = 'Chicharito14'

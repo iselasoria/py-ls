@@ -1,3 +1,4 @@
+#fundamentals 
 Ranges are date types that hold numeric ranges.
 You can't have range literals, instead you always need to declare them with the constructor `range()`.
 

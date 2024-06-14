@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "5940597bb686543a",
+        "id": "9e6e6a6fa39b12f8",
         "type": "tabs",
         "children": [
           {
-            "id": "218b0f0a01ae92ff",
+            "id": "70e8a6408eccc8fa",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "py101/precedence.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#fundamentals",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "py101/precedence.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "py101/precedence.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "py101/precedence.md"
+              }
             }
           }
         ]
@@ -138,35 +146,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "218b0f0a01ae92ff",
+  "active": "70e8a6408eccc8fa",
   "lastOpenFiles": [
-    "py101/identity.md",
-    "py101/pass_by_reference.md",
-    "py101/numbers.md",
-    "py101/collections.md",
-    "py101/strings.md",
+    "py101/predicates.md",
+    "py101/precedence.md",
     "py101/string_methods.md",
     "py101/lists_methods.md",
-    "py101/conditionals.md",
-    "py101/coercion.md",
-    "py101/arguments.md",
-    "py101/parameters.md",
-    "py101/methods.md",
-    "py101/lists.md",
-    "py101/implicit_coercion.md",
-    "py101/identifiers.md",
     "py101/functions.md",
-    "py101/explicit_coercion.md",
-    "py101/dictionary_methods.md",
-    "py101/presedence.md",
-    "py101/scope.md",
-    "py101/operators.md",
-    "py101/expressions.md",
+    "py101/collections.md",
+    "py101/sequences.md",
+    "py101/strings.md",
+    "py101/while.md",
+    "py101/variables.md",
+    "py101/tuple.md",
+    "py101/thruthiness.md",
     "py101/statement.md",
-    "Untitled.canvas",
-    "py101/for.md",
-    "py101/dictionary.md",
+    "py101/scope.md",
     "py101/return.md",
+    "py101/range.md",
+    "py101/py_style_guide.md",
+    "py101/print.md",
+    "py101/pass_by_reference.md",
+    "py101/parameters.md",
+    "py101/operators.md",
+    "py101/numbers.md",
+    "py101/none.md",
+    "py101/mutability.md",
+    "py101/methods.md",
+    "py101/loops.md",
+    "Untitled.canvas",
     "reassignment-visual.png",
     "py110",
     "py101/Untitled",

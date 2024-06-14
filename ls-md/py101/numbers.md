@@ -1,3 +1,4 @@
+#fundamentals
 ## Integers
 [[integers]] are numbers that don't have a decimal point, such as 2, 5, 8.
 

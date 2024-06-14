@@ -1,3 +1,4 @@
+#fundamentals
 variables are types of [[identifiers]] that are used to store a value. Variables don't actually hold any data themselves, but instead they point to the place in memory where the data is stored
 
 

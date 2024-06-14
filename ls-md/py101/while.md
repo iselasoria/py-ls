@@ -1,4 +1,4 @@
-while loops rely on [[conditionals]] to know how many times to execute the block. It will execute for as long as the conditional returns `True`. This type of iterations rely on an index and counter that must be changed so that at some point the [[thruthiness]] of the condition will return a falsy value.
+#fundamentals while loops rely on [[conditionals]] to know how many times to execute the block. It will execute for as long as the conditional returns `True`. This type of iterations rely on an index and counter that must be changed so that at some point the [[thruthiness]] of the condition will return a falsy value.
 
 ```python
 counter = 0

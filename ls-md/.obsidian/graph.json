@@ -5,18 +5,33 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
-  "colorGroups": [],
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "tag:#fundamentals  ",
+      "color": {
+        "a": 1,
+        "rgb": 288569
+      }
+    },
+    {
+      "query": "tag:#strings  ",
+      "color": {
+        "a": 1,
+        "rgb": 14069084
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -0.8,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 0.484407552083333,
+  "textFadeMultiplier": -3,
+  "nodeSizeMultiplier": 1.9267333984375,
+  "lineSizeMultiplier": 0.89912109375,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.4976867462907263,
-  "close": true
+  "centerStrength": 0,
+  "repelStrength": 20,
+  "linkStrength": 0.832600911458333,
+  "linkDistance": 148,
+  "scale": 0.3376418846088592,
+  "close": false
 }

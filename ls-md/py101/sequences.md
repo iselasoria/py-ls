@@ -1,3 +1,4 @@
+#fundamentals #strings
 A sequence is a collection that is accessible through [[index]].
 
 Examples of data types that are sequences:

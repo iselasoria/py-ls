@@ -1,3 +1,4 @@
+#fundamentals 
 The most cmon uses of coercion happen form numbers to string, as in:
 
 ```python
