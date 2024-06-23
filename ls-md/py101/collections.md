@@ -1,5 +1,5 @@
-#fundamentals 
-Collections are container data types that hold other data types.
+#fundamentals
+Collections are [[container]] data types that hold other data types.
 They are _NOT_ indexed, unlike [[sequences]]. All sequences are collections, but not all collections are sequences.
 
 > Collection and Sequence
