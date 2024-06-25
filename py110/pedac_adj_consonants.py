@@ -1,9 +1,9 @@
 """## Algo:
 - initialize an empty dictionary `consonant_tally`
-- iterate over the input list
+- iterate over the input list ['can can', 'toucan', 'batman', 'salt pan']
 - with every iteration
-    - initialize a string object `adj_cons_in_word`
-    - iterate over the string characters
+    - initialize a string object `adj_cons_in_word`  # 'can can'
+    - iterate over the string characters # c,a,n, ,c,a,n
         - push character to `adj_cons_in_word` IF the last char in the variable is also consonant
     - write to the `consonant_tally`
         - word as key
@@ -14,20 +14,26 @@ def consonant(ltr):
     return ltr not in 'AEIOU aeiou'
 
 
+
 def sort_by_consonant_count(lst):
     consonant_tally = {}
 
     for word in lst:
         consonant_tally.setdefault(word, 0)
+        copy_word = ''
         adj_cons_word = ''
+
         for idx, ch in enumerate(word):
-            print(word[idx-1])
-            if consonant(ch) and consonant(word[idx - 1]): #and consonant(adj_cons_word[-1]):
+            copy_word += ch
+            print(f'Current char: {ch} and previous char: {copy_word[idx - 1]}')
+
+            # print(word[idx-1])
+            if consonant(ch) and consonant(copy_word[-1]): #and consonant(adj_cons_word[-1]):
                 adj_cons_word += ch
                 consonant_tally[word] += 1
-        # print(adj_cons_word)
 
-    print(consonant_tally)
+    result = list(consonant_tally.keys())
+    return result
 
 
 
