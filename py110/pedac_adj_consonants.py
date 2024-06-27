@@ -9,6 +9,7 @@
         - word as key
         - the length of `adj_cons_in_word` as value
 """
+#! TODO
 
 def consonant(ltr):
     return ltr not in 'AEIOU aeiou'
