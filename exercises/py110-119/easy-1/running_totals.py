@@ -19,8 +19,6 @@ def running_total(lst):
         if idx == 0:
             new_list.append(item)
         else:
-            # print(item)
-            # print(new_list[-1])
             new_list.append(new_list[-1] + item)
     return new_list
 
