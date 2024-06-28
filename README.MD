@@ -24,7 +24,7 @@ There are several naming conventions used for the comments in the repo, as well 
 - `N`-- this indicates the commit pertains to notes. This type of commit is almost exclusively used in the `ls-ms` directory.
 - `PP`-- this indicates a commit that pertains to freestyle practice. Part of the `practice-puddle` directory. This directory holds any scratch paper for testing in the repl. The understaing is that these are _NOT_ proper notes yet, so they are not part of `ls_md`.
 
--`MP`-- Mastery Practice: this is the code used to identify commits that are related to material used to master fundamentals. This material is not necessarily related to any one class but rather to the mastery of the fundamental concepts presented in each course. Such as working through a long list of problems in the first two courses in preparation of the interviews.
+- `MP`-- Mastery Practice: this is the code used to identify commits that are related to material used to master fundamentals. This material is not necessarily related to any one class but rather to the mastery of the fundamental concepts presented in each course. Such as working through a long list of problems in the first two courses in preparation of the interviews.
 
 ## Naming Convention for Branches
 ---
