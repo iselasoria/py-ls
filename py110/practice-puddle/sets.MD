@@ -34,3 +34,4 @@ This is a better option to remove an elements without causing the cide to break.
 Immutable
 
 ## `.clear()`
+Only available to `set`, `frozenset` and `dictionary`.
