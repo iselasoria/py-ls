@@ -36,6 +36,11 @@ new_list = [multiples_of_three(tiny_list) for tiny_list in lst]
 print('This was done with multiple comprehensions and a helper function: ')
 print(new_list)
 
+# comprehension eleganza
+new_list = [[num for num in sublist if num % 3 == 0] for sublist in lst]
+print('Now we\'re just showing off here: ')
+print(new_list)
+
 # expected result
 [[], [3, 12], [9], [15, 18]]
 
