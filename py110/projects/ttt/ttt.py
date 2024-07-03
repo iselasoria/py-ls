@@ -12,6 +12,8 @@ def prompt(message):
 
 def display_board(board):
     os.system('clear')
+
+    prompt(f'You\'re {HUMAN_MARKER}. Computer is {COMPUTER_MARKER}.')
     print('')
     print('     |     |')
     print(f"  {board[1]}  |  {board[2]}  |  {board[3]}")
@@ -30,7 +32,7 @@ def display_board(board):
 def initialize_board():
     return {square: INITIAL_MARKER for square in range(1,10)}
 
-def empty_squares(baord):
+def empty_squares(board):
     return [key
             for key, val in board.items()
             if val == INITIAL_MARKER]
@@ -39,7 +41,7 @@ def board_full(board):
     return len(empty_squares(board)) == 0
 
 def someone_won(board):
-    return False
+    return bool(detect_winner(board))
 
 def player_chooses_square(board):
     while True:
@@ -58,16 +60,51 @@ def computer_chooses_square(board):
     square = random.choice(empty_squares(board))
     board[square] = COMPUTER_MARKER
 
+def detect_winner(board):
+    winning_lines = [
+        [1,2,3], [4,5,6], [7,8,9],
+        [1,4,7], [2,5,8], [3,6,9],
+        [1,5,9], [3,5,7]
+    ]
 
-board = initialize_board()
-display_board(board)
+    for line in winning_lines:
+        sq1, sq2, sq3 = line
+        if (board[sq1] == HUMAN_MARKER
+                and board[sq2] == HUMAN_MARKER
+                and board[sq3] == HUMAN_MARKER):
+            return 'Player'
+        elif (board[sq1] == COMPUTER_MARKER
+                and board[sq2] == COMPUTER_MARKER
+                and board[sq3] == COMPUTER_MARKER):
+            return 'Computer'
+    return None
 
-while True:
-    player_chooses_square(board)
-    display_board(board)
+def play_ttt():
+    while True:
+        board = initialize_board()
+        # display_board(board)
 
-    computer_chooses_square(board)
-    display_board(board)
+        while True:
+            display_board(board)
+            player_chooses_square(board)
+            if someone_won(board) or board_full(board):
+                break
 
-    if someone_won(board) or board_full(board):
-        break
+            computer_chooses_square(board)
+            if someone_won(board) or board_full(board):
+                break
+
+
+        if someone_won(board):
+            prompt(f'{detect_winner(board)} won!')
+        else:
+            prompt('It\'s a tie!')
+
+        prompt('Do you want to play again (y/n)')
+        answer = input().lower()
+
+        if answer[0] != 'y':
+            break
+    prompt('Thanks for playing Tic Tac Toe!')
+
+play_ttt()
