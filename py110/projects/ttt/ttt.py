@@ -9,12 +9,11 @@ COMPUTER_MARKER = 'O'
 def prompt(message):
     print(f'==> {message}')
 
-def joinor(opt):
-
-    if len(opt) >= 2:
-        return f'Choose a square: {", ".join(opt[:-2])} or {opt[-1]}'
-    elif len(opt) == 1:
-        return f'Choose a square: {opt}'
+def joinor(option):
+    if len(option) >= 2:
+        return f'Choose a square: {", ".join(option[:-1])} or {option[-1]}'
+    elif len(option) == 1:
+        return f'Choose a square: {option[0]}'
     else:
         return f'Choose a square: {""}.'
 
