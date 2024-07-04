@@ -9,6 +9,15 @@ COMPUTER_MARKER = 'O'
 def prompt(message):
     print(f'==> {message}')
 
+def joinor(opt):
+
+    if len(opt) >= 2:
+        return f'Choose a square: {", ".join(opt[:-2])} or {opt[-1]}'
+    elif len(opt) == 1:
+        return f'Choose a square: {opt}'
+    else:
+        return f'Choose a square: {""}.'
+
 
 def display_board(board):
     os.system('clear')
@@ -46,7 +55,8 @@ def someone_won(board):
 def player_chooses_square(board):
     while True:
         valid_choices = [str(num) for num in empty_squares(board)]
-        prompt(f'Choose a square {", ".join(valid_choices)}:')
+        # prompt(f'Choose a square {", ".join(valid_choices)}:')
+        prompt(f'Choose a square {joinor(valid_choices)}')
         square = input().strip()
         if square in valid_choices:
             break
