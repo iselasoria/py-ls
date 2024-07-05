@@ -12,23 +12,24 @@ def prompt(msg):
     print(f"{msg}")
 
 def shuffle(deck):
+    # shuffle the deck
     random.shuffle(deck)
 
-def tally_up_score(hand):
-    pass
-    # take the sum of the cards in the hand
-def display_card(hand):
+def tally_up_score(hand): # take the sum of the cards in the hand
+    for card in hand:
+        print(card[1])
+
+
+def display_card(hand): # display current card selected from the deck at random needs work
     prompt(f"The card you got is: {hand}")
 
-def display_score(hand):
+def display_score(hand): # display the current score
     prompt(f"Your're at {hand[1]}.")
 
-def hit(deck):
+def hit(deck): # suffle, choose and remove from deck. Display the chosen card and current score
     shuffle(deck)
     card = random.choice(deck)
     deck.remove(card)
-    display_card(card)
-    display_score(card)
     return card
 
 def calculate_ace_value(ace_card):
@@ -38,15 +39,21 @@ def calculate_ace_value(ace_card):
 def busted(hand):
     tally_up_score(hand) >= 21
 
+def deal_kickoff(deck): # distribute two cards to players and set up scores
+    player_hand = [hit(deck) for _ in range(1,3)]
+    computer_hand = [hit(deck) for _ in range(1,3)]
+    print(f"Player, you have the following cards: {player_hand}")
+    print(f"The computer has {computer_hand[0]} and a mystery card. Tread wiseley.")
+
 # set up hands and scores
 player_hand = []
 dealer_hand = []
-scores = {'player': 0, 'computer': 0}
+scores = {'player': [], 'computer': []}
 
-# distribute cards to players
-print(len(deck))
-player_hand = hit(deck)
-print(len(deck))
+deal_kickoff(deck)
+# tally_up_score(player_hand)
+
+
 
 while True:
     # game logic
@@ -56,8 +63,9 @@ while True:
     if answer == 'stay':# or busted():
         break
     elif answer == 'hit':
-       player_hand.append(hit(deck))
-       print(player_hand)
+        print(player_hand)
+        player_hand.append(hit(deck))
+        print(player_hand)
 
     break
 
