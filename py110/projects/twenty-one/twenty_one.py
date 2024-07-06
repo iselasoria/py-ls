@@ -1,3 +1,4 @@
+import pdb
 import random
 
 deck = [
@@ -6,7 +7,11 @@ deck = [
     ['C','2'], ['C','3'], ['C','4'], ['C','5'], ['C','6'], ['C','7'], ['C','8'], ['C','9'], ['C','10'], ['C','J'], ['C','Q'], ['C','K'], ['C','A'],
     ['S','2'], ['S','3'], ['S','4'], ['S','5'], ['S','6'], ['S','7'], ['S','8'], ['S','9'], ['S','10'], ['S','J'], ['S','Q'], ['S','K'], ['S','A']
 ]
-print(len(deck))
+
+# set up hands and scores
+player_hand = []
+dealer_hand = []
+scores = {'player': [], 'dealer': []}
 
 def prompt(msg):
     print(f"{msg}")
@@ -15,9 +20,18 @@ def shuffle(deck):
     # shuffle the deck
     random.shuffle(deck)
 
+def evaluate_face_value(card):
+    # face = card[1]
+    # match face:
+    #     case when
+    pass
+
 def tally_up_score(hand): # take the sum of the cards in the hand
-    for card in hand:
-        print(card[1])
+    # tally = []
+    # for card in hand:
+    #     tally.append(evaluate_face_value(card[1]))
+    # return tally
+    pass
 
 
 def display_card(hand): # display current card selected from the deck at random needs work
@@ -40,20 +54,23 @@ def busted(hand):
     tally_up_score(hand) >= 21
 
 def deal_kickoff(deck): # distribute two cards to players and set up scores
-    player_hand = [hit(deck) for _ in range(1,3)]
-    computer_hand = [hit(deck) for _ in range(1,3)]
-    print(f"Player, you have the following cards: {player_hand}")
-    print(f"The computer has {computer_hand[0]} and a mystery card. Tread wiseley.")
+    shuffle(deck)
+    print(player_hand)
+    for _ in range(1,3):
+        player_hand.insert(1, deck.pop())
 
-# set up hands and scores
-player_hand = []
-dealer_hand = []
-scores = {'player': [], 'computer': []}
+    # [deck.pop(), deck.pop()] # [hit(deck) for _ in range(1,3)]
+    dealer_hand = [deck.pop(), deck.pop()]
+    print(f"Player, you have the following cards: {player_hand} and your tally is at {tally_up_score(player_hand)}.")
+    print(f"The Dealer has {dealer_hand[-1]} and a mystery card. Tread wiseley.")
+
+
+
 
 deal_kickoff(deck)
 # tally_up_score(player_hand)
 
-
+print(f"PLAYER HAND IS: {player_hand}")
 
 while True:
     # game logic
