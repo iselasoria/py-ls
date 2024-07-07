@@ -41,10 +41,10 @@ def evaluate_face_value(card):
             return 8
         case '9':
             return 9
-        case 'J' | 'Q' | 'K':
+        case '10' | 'J' | 'Q' | 'K':
             return 10
         case 'A':
-            pass
+            return 100
             # return 100 #calculate_ace_value(player_hand)
 
 
@@ -52,6 +52,7 @@ def tally_up_score(hand): # take the sum of the cards in the hand
     tally = []
     for card in hand:
         tally.append(evaluate_face_value(card[1]))
+    # pdb.set_trace()
     return sum(tally)
 
 def update_scoreboard(participant, hand):
@@ -85,13 +86,12 @@ def display_card(suit_card): # display current card selected from the deck at ra
             print(f"|    {suit_card[1]}|")
             print("+-----+")
 
-
-
 def display_score(hand): # display the current score
     prompt(f"Your're at {hand[1]}.")
 
 def hit(deck): # suffle, choose and remove from deck. Display the chosen card and current score
     shuffle(deck)
+    # pdb.set_trace()
     card = random.choice(deck)
     deck.remove(card)
     return card
@@ -108,10 +108,22 @@ def calculate_ace_value(hand):
     # print()
     # print(f"Hand value to calc ace: {hand_val}")
 
-
 def busted(hand):
-    print(f"HAND: {hand}")
+    # print(f"HAND: {hand}")
     return bool(tally_up_score(hand) >= 21)
+
+def dealer_turn(deck):
+    print('Dealer turn.........')
+    while scores['dealer'] <= 17:
+        dealer_temp = hit(deck)
+        print('The dealer just hit')
+        display_card(dealer_temp)
+        dealer_hand.append(dealer_temp)
+        scores['dealer'] = tally_up_score(dealer_hand)
+        print(scores)
+        if busted(dealer_hand):
+            print("Dealer just busted, player wins!")
+        break
 
 def deal_kickoff(deck): # distribute two cards to players and set up scores
     shuffle(deck)
@@ -121,11 +133,14 @@ def deal_kickoff(deck): # distribute two cards to players and set up scores
         player_hand.insert(1, tmp_card)
         display_card(tmp_card)
 
+
     print('The Dealer has the following plus one mystery card:')
+
     for _ in range(1,3):
         dtpm_card = deck.pop()
         dealer_hand.insert(1, dtpm_card)
     display_card(dtpm_card)
+    print(dealer_hand)
 
     update_scoreboard('player', player_hand)
     update_scoreboard('dealer', dealer_hand)
@@ -138,7 +153,6 @@ def deal_kickoff(deck): # distribute two cards to players and set up scores
 
 
 deal_kickoff(deck)
-# tally_up_score(player_hand)
 
 
 while True:
@@ -146,19 +160,29 @@ while True:
     prompt('Do you want to stay or hit?')
     answer = input()
 
-    print(busted(player_hand))
-    if answer == 'stay' or busted(player_hand):
-        print("YOU BUSTED at the first try, YIELDING TURN TO THE DEALER\./.")
+    # print(busted(player_hand))
+    if busted(player_hand):
+        print("YOU BUSTED at the first try, the game is over!")
         break
+    elif answer == 'stay':
+        print('You chose to stay, yielding the turn to the Dealer')
+        break
+        # loop player logic where the keeps hitting as long as his score is under 17
+        # once Dealer gets close to 17, we compare both scores--> the maximum of the dictionary of scores
     elif answer == 'hit':
         print(player_hand)
         player_hand.append(hit(deck))
         print(player_hand)
+        update_scoreboard('player', player_hand)
+        print(scores)
         # pdb.set_trace()
         if busted(player_hand):
             print("YOU BUSTED AFTER YOU HIT, YIELDING TURN TO THE DEALER\./.")
             break
+            # place dealer logi here
         print(f"So far::::::::{tally_up_score(player_hand)}")
         busted(player_hand)
 
+    # dealer turn
+dealer_turn(deck)
 
