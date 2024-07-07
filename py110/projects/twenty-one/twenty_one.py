@@ -13,29 +13,83 @@ player_hand = []
 dealer_hand = []
 scores = {'player': [], 'dealer': []}
 
+
 def prompt(msg):
-    print(f"{msg}")
+    print(f"==> {msg}")
 
 def shuffle(deck):
     # shuffle the deck
     random.shuffle(deck)
 
+
 def evaluate_face_value(card):
-    # face = card[1]
-    # match face:
-    #     case when
-    pass
+    face = card
+    match face:
+        case '2':
+            return 2
+        case '3':
+            return 3
+        case '4':
+            return 4
+        case '5':
+            return 5
+        case '6':
+            return 6
+        case '7':
+            return 7
+        case '8':
+            return 8
+        case '9':
+            return 9
+        case 'J' | 'Q' | 'K':
+            return 10
+        case 'A':
+            calculate_ace_value(hand)
+
+
+
+
 
 def tally_up_score(hand): # take the sum of the cards in the hand
-    # tally = []
-    # for card in hand:
-    #     tally.append(evaluate_face_value(card[1]))
-    # return tally
-    pass
+    tally = []
+    for card in hand:
+        tally.append(evaluate_face_value(card[1]))
+    return sum(tally)
+
+def update_scoreboard(participant, hand):
+    scores[participant] = tally_up_score(hand)
 
 
-def display_card(hand): # display current card selected from the deck at random needs work
-    prompt(f"The card you got is: {hand}")
+
+def display_card(suit_card): # display current card selected from the deck at random needs work
+    match suit_card[0]:
+        case 'H':
+            print("+-----+")
+            print(f"|{suit_card[1]}    |")
+            print(f"|  {chr(9829)}  |")
+            print(F"|    {suit_card[1]}|")
+            print("+-----+")
+        case 'D':
+            print("+-----+")
+            print(f"|{suit_card[1]}    |")
+            print(f"|  {chr(9830)}  |")
+            print(F"|    {suit_card[1]}|")
+            print("+-----+")
+        case 'S':
+            print("+-----+")
+            print(f"|{suit_card[1]}    |")
+            print(f"|  {chr(9824)}  |")
+            print(F"|    {suit_card[1]}|")
+            print("+-----+")
+        case 'C':
+            print("+-----+")
+            print(f"|{suit_card[1]}|    ")
+            print(f"|  {chr(9827)}  |")
+            print(f"|    {suit_card[1]}|")
+            print("+-----+")
+
+
+
 
 def display_score(hand): # display the current score
     prompt(f"Your're at {hand[1]}.")
@@ -57,12 +111,15 @@ def deal_kickoff(deck): # distribute two cards to players and set up scores
     shuffle(deck)
     print(player_hand)
     for _ in range(1,3):
-        player_hand.insert(1, deck.pop())
+        tmp_card = deck.pop()
+        player_hand.insert(1, tmp_card)
+        display_card(tmp_card)
 
     # [deck.pop(), deck.pop()] # [hit(deck) for _ in range(1,3)]
     dealer_hand = [deck.pop(), deck.pop()]
-    print(f"Player, you have the following cards: {player_hand} and your tally is at {tally_up_score(player_hand)}.")
-    print(f"The Dealer has {dealer_hand[-1]} and a mystery card. Tread wiseley.")
+    print(f"_________{display_card(player_hand)}")
+    # print(f"Player, you have the following cards: {player_hand} and your tally is at {tally_up_score(player_hand)}.")
+    # print(f"The Dealer has {dealer_hand[-1]} and a mystery card. Tread wiseley.")
 
 
 
