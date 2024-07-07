@@ -1,4 +1,6 @@
+import os
 import pdb
+import time
 import random
 
 deck = [
@@ -19,6 +21,17 @@ def prompt(msg):
 
 def shuffle(deck):
     # shuffle the deck
+    print(f"Shuffling the deck")
+    time.sleep(2)
+    print(f"\033[32;5m{chr(9829)}\033[0m")
+    time.sleep(.5)
+    print(f"\033[32;5m{chr(9830)}\033[0m")
+    time.sleep(.5)
+    print(f"\033[32;5m{chr(9824)}\033[0m")
+    time.sleep(.5)
+    print(f"\033[32;5m{chr(9827)}\033[0m")
+    time.sleep(2)
+    os.system('clear')
     random.shuffle(deck)
 
 
@@ -114,9 +127,10 @@ def busted(hand):
 
 def dealer_turn(deck):
     print('Dealer turn.........')
+    time.sleep(3)
     while scores['dealer'] <= 17:
         dealer_temp = hit(deck)
-        print('The dealer just hit')
+        print('The dealer just drew:')
         display_card(dealer_temp)
         dealer_hand.append(dealer_temp)
         scores['dealer'] = tally_up_score(dealer_hand)
@@ -127,6 +141,7 @@ def dealer_turn(deck):
 
 def deal_kickoff(deck): # distribute two cards to players and set up scores
     shuffle(deck)
+
     print("Your cards are: ")
     for _ in range(1,3):
         tmp_card = deck.pop()
@@ -140,7 +155,6 @@ def deal_kickoff(deck): # distribute two cards to players and set up scores
         dtpm_card = deck.pop()
         dealer_hand.insert(1, dtpm_card)
     display_card(dtpm_card)
-    print(dealer_hand)
 
     update_scoreboard('player', player_hand)
     update_scoreboard('dealer', dealer_hand)
@@ -170,19 +184,22 @@ while True:
         # loop player logic where the keeps hitting as long as his score is under 17
         # once Dealer gets close to 17, we compare both scores--> the maximum of the dictionary of scores
     elif answer == 'hit':
-        print(player_hand)
-        player_hand.append(hit(deck))
+        player_temp_card = hit(deck)
+        player_hand.append(player_temp_card)
+        print('You just drew:')
+        display_card(player_temp_card)
         print(player_hand)
         update_scoreboard('player', player_hand)
         print(scores)
         # pdb.set_trace()
         if busted(player_hand):
-            print("YOU BUSTED AFTER YOU HIT, YIELDING TURN TO THE DEALER\./.")
+            print("YOU BUSTED AFTER YOU HIT, DEALER WINS")
             break
             # place dealer logi here
         print(f"So far::::::::{tally_up_score(player_hand)}")
         busted(player_hand)
 
     # dealer turn
-dealer_turn(deck)
+if (busted(dealer_hand) == False) and (busted(player_hand) == False):
+    dealer_turn(deck)
 
