@@ -44,10 +44,8 @@ def evaluate_face_value(card):
         case 'J' | 'Q' | 'K':
             return 10
         case 'A':
-            calculate_ace_value(hand)
-
-
-
+            pass
+            # return 100 #calculate_ace_value(player_hand)
 
 
 def tally_up_score(hand): # take the sum of the cards in the hand
@@ -58,7 +56,6 @@ def tally_up_score(hand): # take the sum of the cards in the hand
 
 def update_scoreboard(participant, hand):
     scores[participant] = tally_up_score(hand)
-
 
 
 def display_card(suit_card): # display current card selected from the deck at random needs work
@@ -90,7 +87,6 @@ def display_card(suit_card): # display current card selected from the deck at ra
 
 
 
-
 def display_score(hand): # display the current score
     prompt(f"Your're at {hand[1]}.")
 
@@ -100,26 +96,43 @@ def hit(deck): # suffle, choose and remove from deck. Display the chosen card an
     deck.remove(card)
     return card
 
-def calculate_ace_value(ace_card):
-    pass
+def calculate_ace_value(hand):
+    if tally_up_score(hand) >= 21:
+        return 1
+    else:
+        return 11
+    # print()
+    # print(hand)
+
+    # hand_val = [num for num in hand[1][1] for num in hand]
+    # print()
+    # print(f"Hand value to calc ace: {hand_val}")
 
 
 def busted(hand):
-    tally_up_score(hand) >= 21
+    print(f"HAND: {hand}")
+    return bool(tally_up_score(hand) >= 21)
 
 def deal_kickoff(deck): # distribute two cards to players and set up scores
     shuffle(deck)
-    print(player_hand)
+    print("Your cards are: ")
     for _ in range(1,3):
         tmp_card = deck.pop()
         player_hand.insert(1, tmp_card)
         display_card(tmp_card)
 
-    # [deck.pop(), deck.pop()] # [hit(deck) for _ in range(1,3)]
-    dealer_hand = [deck.pop(), deck.pop()]
-    print(f"_________{display_card(player_hand)}")
-    # print(f"Player, you have the following cards: {player_hand} and your tally is at {tally_up_score(player_hand)}.")
-    # print(f"The Dealer has {dealer_hand[-1]} and a mystery card. Tread wiseley.")
+    print('The Dealer has the following plus one mystery card:')
+    for _ in range(1,3):
+        dtpm_card = deck.pop()
+        dealer_hand.insert(1, dtpm_card)
+    display_card(dtpm_card)
+
+    update_scoreboard('player', player_hand)
+    update_scoreboard('dealer', dealer_hand)
+    print(f"SCOREBOARD: {scores}")
+
+    print(f"Player, your tally is at {scores['player']}.")
+    # print(f"The Dealer has {dealer_hand} and a mystery card. Tread wiseley.")
 
 
 
@@ -127,19 +140,25 @@ def deal_kickoff(deck): # distribute two cards to players and set up scores
 deal_kickoff(deck)
 # tally_up_score(player_hand)
 
-print(f"PLAYER HAND IS: {player_hand}")
 
 while True:
     # game logic
     prompt('Do you want to stay or hit?')
     answer = input()
 
-    if answer == 'stay':# or busted():
+    print(busted(player_hand))
+    if answer == 'stay' or busted(player_hand):
+        print("YOU BUSTED at the first try, YIELDING TURN TO THE DEALER\./.")
         break
     elif answer == 'hit':
         print(player_hand)
         player_hand.append(hit(deck))
         print(player_hand)
+        # pdb.set_trace()
+        if busted(player_hand):
+            print("YOU BUSTED AFTER YOU HIT, YIELDING TURN TO THE DEALER\./.")
+            break
+        print(f"So far::::::::{tally_up_score(player_hand)}")
+        busted(player_hand)
 
-    break
 
