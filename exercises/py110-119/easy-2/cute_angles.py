@@ -6,7 +6,7 @@ degree symbol (°) to represent degrees, a single quote (') to
 represent minutes, and a double quote (") to represent seconds.
 There are 60 minutes in a degree, and 60 seconds in a minute.
 
-DEGREE = "\u00B0"
+
 
 I: int
 O: str
@@ -16,6 +16,17 @@ dms(30) == "30°00'00\""
 dms(76.73) == "76°43'48\""
 
 """
+
+DEGREE = "\u00B0"
+
+def dms(decimal_num):
+    degrees = decimal_num // 1
+    minutes = decimal_num % 1 * 60
+    seconds = int(minutes % 1 * 60)
+    return (f"{int(degrees)}{DEGREE}{int(minutes):02d}'{seconds:02d}\"")
+
+#! TODO understand the string formatting
+
 
 # test cases
 # All of these examples should print True
