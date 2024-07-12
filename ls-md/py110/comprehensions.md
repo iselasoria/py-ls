@@ -1,5 +1,7 @@
-[[lists]] comprehensions offer a way for us to write iterations with transformations in a simple one-liner.
+#fundamentals 
+comprehensions offer a way for us to write iterations with transformations in a simple one-liner.
 
+[[lists]]
 ```python
 lst = [2, 4, 6, 8, 10]
 doubled_lst = [num * 2 for num in lst]
@@ -28,3 +30,7 @@ print(result2)
 
 # result_storage = [[expression with the smallest_unit iterable for smallest_unit in sublist] for sublist in main_list]
 ```
+
+[[dictionary]]
+
+[[sets]]
