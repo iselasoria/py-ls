@@ -11,26 +11,11 @@
             "id": "70e8a6408eccc8fa",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "py101/lists_methods.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f8d9a068febd3266",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
+              "type": "graph",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "py101/lists_methods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "py101/lists_methods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "py101/lists_methods.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -157,13 +138,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f8d9a068febd3266",
+  "active": "70e8a6408eccc8fa",
   "lastOpenFiles": [
+    "py110/comprehensions.md",
+    "py101/lists_methods.md",
     "py101/lists.md",
     "py101/string_methods.md",
     "py101/precedence.md",
     "py101/predicates.md",
-    "py101/lists_methods.md",
     "py101/functions.md",
     "py101/collections.md",
     "py101/sequences.md",
@@ -184,7 +166,6 @@
     "py101/numbers.md",
     "py101/none.md",
     "py101/mutability.md",
-    "py101/methods.md",
     "Untitled.canvas",
     "reassignment-visual.png",
     "py110",
