@@ -1,5 +1,45 @@
 # Chunks of Useful Code
 
+## Generating Substrings
+```python
+word = 'madam'
+
+
+def gen_subs(s):
+    subs = []
+    for start_idx in range(len(s)): # all thru the end of the string
+        for end_idx in range(start_idx, len(s)): # starting at the moving top level iteration index and up thru the lenght of the string
+            current_sub = s[start_idx:end_idx+1] # slice the string from start to end + 1
+            subs.append(current_sub) # append to list
+    return subs # return list
+
+print(gen_subs('madam'))
+
+
+
+print(gen_subs(word))
+# ['m', 'ma', 'mad', 'mada', 'madam', 'a', 'ad', 'ada', 'adam', 'd', 'da', 'dam', 'a', 'am', 'm']
+```
+
+## Gererating Substrings that are only vowels
+```python
+word = 'onomatopeia'
+
+def gen_vowel_subs(string):
+    substrings = []
+
+    for start_idx in range(len(string)):
+        for end_idx in range(start_idx,len(string)):
+            sub = string[start_idx:end_idx+1]
+            if all(char in 'AEIOUaeiou' for char in sub):
+                substrings.append(sub)
+    return substrings
+
+print(gen_vowel_subs(word))
+# ['o', 'o', 'a', 'o', 'e', 'ei', 'eia', 'i', 'ia', 'a']
+
+```
+
 ## Counting occurences of a letter
 ```python
 statement = "The Flintstones Rock"
