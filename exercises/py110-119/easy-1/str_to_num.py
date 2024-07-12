@@ -45,20 +45,27 @@ For '3': '3' > '0', '3' > '1', and '3' > '2' are all True, so result becomes 123
 
 #! TODO come back and re-write algo
 
+# def string_to_integer(str):
+#     result = 0
+
+#     for digit in str:
+#         result *= 10
+#         # print(result)
+#         for d in '0123456789':
+#             result += digit > d
+
+#     return result
+
+
 def string_to_integer(str):
     result = 0
-
     for digit in str:
-        result *= 10
-        print(result)
-        for d in '0123456789':
-            result += digit > d
-
+        result = result * 10 + (ord(digit) - ord('0'))
     return result
 
 
 
 # test cases
-# print(string_to_integer("4321"))# == 4321)  # True
-# print(string_to_integer("570") == 570)    # True
+print(string_to_integer("4321"))# == 4321)  # True
+print(string_to_integer("570") )#== 570)    # True
 print(string_to_integer("57"))# == 570)    # True
