@@ -21,7 +21,7 @@ print(gen_subs(word))
 # ['m', 'ma', 'mad', 'mada', 'madam', 'a', 'ad', 'ada', 'adam', 'd', 'da', 'dam', 'a', 'am', 'm']
 ```
 
-## Gererating Substrings that are only vowels
+## Generating Substrings that are only vowels
 ```python
 word = 'onomatopeia'
 
@@ -40,7 +40,18 @@ print(gen_vowel_subs(word))
 
 ```
 
-## Counting occurences of a letter
+## Generate increasing substrings
+```python
+def gen_subs(str):
+    substrings = []
+    for sliding_idx in range(len(str)):
+        suby = str[:sliding_idx + 1]
+        substrings.append(suby)
+
+    return substrings
+```
+
+## Counting occurrences of a letter
 ```python
 statement = "The Flintstones Rock"
 
