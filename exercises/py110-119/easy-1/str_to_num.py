@@ -43,7 +43,7 @@ For '3': '3' > '0', '3' > '1', and '3' > '2' are all True, so result becomes 123
 
 """
 
-#! TODO come back and re-write algo
+#? review algo
 
 # def string_to_integer(str):
 #     result = 0
