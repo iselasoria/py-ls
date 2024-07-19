@@ -23,12 +23,14 @@ Interim: dictionary
 O: list
 
 Algo:
+- initialize inventory to 0
 - use the inventory_items_transaction(dictionario) to get all the transactions for the specific number in question and store in list
 - iterate over the list and with each run #  {"id": 101, "movement": 'in',  "quantity":  5}
     -  iterate over the dictionary
         - if the movement is out,
-            - take away mvoement
-        othereis decied
+            - take away from inventory
+        otherwise increase the movement by the quantity
+- return inventory comparison of greater than 0
 """
 
 transactions = [
@@ -43,6 +45,23 @@ transactions = [
     {"id": 102, "movement": 'in',  "quantity": 22},
     {"id": 103, "movement": 'out', "quantity": 15},
 ]
+def transactions_for(inventory_item, inventory_list):
+    return [tiny_dict for tiny_dict in transactions if tiny_dict["id"] == inventory_item]
+
+
+def is_item_available(product_id, transactions):
+    product_inventory_transactions = transactions_for(product_id, transactions)
+
+    inventory = 0
+
+    for product in product_inventory_transactions:
+        if product['movement'] == 'in':
+            inventory += product['quantity']
+            # print(f"Inventory is now: {inventory}")
+        else:
+            inventory -= product['quantity']
+            # print(inventory)
+    return inventory > 0
 
 print(is_item_available(101, transactions) == False)  # True
 print(is_item_available(103, transactions) == False)  # True
