@@ -81,3 +81,36 @@ alpha_positions = zip(alphabet, alpha_range)
 alpha_positions = dict(alpha_positions)
 print(alpha_positions)
 ```
+
+## Partitions
+
+```python
+# create a list
+o_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+# size of each chunk
+n = 3
+
+# partition the list using list comprehension
+p_list = [o_list[i:i + n] for i in range(0, len(o_list), n)]
+pp_list = [o_list[i:i + n] for i in range(0, len(o_list))]
+# display original list
+print("Original List: ")
+print(o_list)
+print()
+# display the list results
+print("Partitioned List:")
+print(p_list)
+print()
+print("Pretty partition: ")
+print(pp_list)
+```
+
+## primes
+```ruby
+def prime?(number)
+  (2...number).all? do |divisor|
+    # p divisor
+    number % divisor != 0
+  end
+end
+```
