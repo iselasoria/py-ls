@@ -235,4 +235,47 @@ surname = 'Soria'
 print(surname.upper()) # SORIA
 ```
 
-## 
+#### `.index()`
+This method works similarly to [[lists_methods#`.index()`]]
+
+```python
+name = 'alexandra'
+
+print(name.index('a')) # 0
+print(name.index('a', 3)) # 4
+print(name.index('a', 5, 9)) # 8
+```
+
+#### `.split()`
+The `.split()` method uses space as the default delimiter for splitting the string into a [[lists]]
+```python
+sentence = "This here string shall be split!"
+
+sentence_split = sentence.split()
+
+print(sentence_split) # ['This', 'here', 'string', 'shall', 'be', 'split!']
+```
+
+We can use any delimiter by passing it to this method:
+```python
+data = "rosa,isela,soria,monzon"
+
+data_split = data.split(',')
+print(data_split) # ['rosa', 'isela', 'soria', 'monzon']
+```
+
+#### `.count()`
+This method counts the occurrences of a character:
+```python
+data = "rosa,isela,soria,monzon"
+
+print(data.count(','))
+```
+
+We can also count the occurrence of substrings:
+```python
+data = "Many years later, as he faced the firing squad, Colonel Aureliano Buendia was to remember that distant afternoon when his father took him to discover ice."
+
+
+print(data.count('to')) # 3
+```
