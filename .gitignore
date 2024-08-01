@@ -3,5 +3,4 @@ ignore-me-please/
 .DS_Store
 /assessment-prep/*
 exercises/ta-sessions/*
-
-ls-md/.obsidian/
+ls-md/.obsidian/*
