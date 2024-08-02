@@ -47,3 +47,66 @@ We could instead use `.get()` which will retrieve the value at the key if it exi
 ```python
 print(student.get('study_buddy')) # None
 ```
+
+#### `.setdefault()`
+
+#### `del`
+The delete statement. `del` is used to remove a key value pair from a [[dictionary]].
+```python
+person = {
+	"name": "Deb",
+	"age": 30,
+	"occupation": "detective",
+	"personality": "outgoing"
+}
+
+for k, v in person.items():
+	print(f"{k} is {v}")
+# name is Deb
+# age is 30
+# occupation is detective
+# personality is outgoing
+
+print()
+
+del person["personality"]
+
+for k, v in person.items():
+	print(f"{k} is {v}")
+
+# name is Deb
+# age is 30
+# occupation is detective
+```
+
+#### `.get()`
+`.get()` lets us retrieve data from a dictionary and return `None` by default when the data does not exists, instead of raising an error like we would by using the retrieve-by-key process.
+
+```python
+person = {
+	"name": "Debra Morgan",
+	"age": 30,
+	"occupation": "detective",
+	"personality": "outgoing"
+}
+
+print(person.get("siblings")) # None
+```
+We can also pass an optional string argument to return something by default when a key is not found:
+```python
+print(person.get("siblings", "Dexter Morgan")) # Dexter Morgan
+```
+
+#### `.setdefault()`
+This method creates a key/value pair if it does not exists:
+```python
+person.setdefault("city","Miami")
+
+print(person) # {'name': 'Debra Morgan', 'age': 30, 'occupation': 'detective', 'personality': 'outgoing', 'city': 'Miami'}
+```
+If it does, it won't change the associated value:
+```python
+person.setdefault("age","35")
+
+print(person) # {'name': 'Debra Morgan', 'age': 30, 'occupation': 'detective', 'personality': 'outgoing'}
+```
