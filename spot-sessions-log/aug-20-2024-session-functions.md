@@ -1,7 +1,7 @@
 # Functions
 Date: 08-02-2024
 
-
+|  |  |
 | :-----------: |:-------------:|
 | Date          | 08-02-2024    |
 | Atendees      | Baur, ~~Lionel~~, Rosie, Wonnie |
