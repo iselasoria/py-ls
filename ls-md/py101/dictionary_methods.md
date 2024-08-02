@@ -110,3 +110,52 @@ person.setdefault("age","35")
 
 print(person) # {'name': 'Debra Morgan', 'age': 30, 'occupation': 'detective', 'personality': 'outgoing'}
 ```
+
+#### `.pop()`
+the dictionary `.pop()` method works by removing the key/value pair that corresponds to the key passed in and returning the value:
+```python
+just_removed = person.pop("personality")
+
+print(just_removed) # outgoing
+print(person) # {'name': 'Deb', 'age': 30, 'occupation': 'detective', 'siblings': 'Dexter Morgan'}
+```
+
+#### `.popitem()`
+This method allows us to remove the last key/value pair in the dictionary and return it as a [[tuple]]. Although they are _NOT_ [sequences], as of Python 3.7, a [[dictionary]] keeps the order its keys were added in:
+
+```python
+
+# {'name': 'Deb', 'age': 30, 'occupation': 'detective', 'personality': 'outgoing', 'siblings': 'Dexter Morgan'}
+print(person.popitem()) # ('siblings','Dexter Morgan')
+```
+
+#### `.update()`
+This method is called on a dictionary and takes another dictionary (or iterable) as the argument. The result is a modified caller dictionary. 
+```python
+person = {
+	"name": "Deb",
+	"age": 30,
+	"occupation": "detective",
+	"personality": "outgoing",
+	"siblings": "Dexter Morgan"
+}
+
+places = {
+	"work" : "Miami Metro PD",
+	"house" : "apartment",
+	"name" : "Debra Morgan"
+}
+
+  
+
+person.update(places)
+
+
+print(person) # {'name': 'Debra Morgan', 'age': 30, 'occupation': 'detective', 'personality': 'outgoing', 'siblings': 'Dexter Morgan', 'work': 'Miami Metro PD', 'house': 'apartment'}
+print()
+print(places) # {'work': 'Miami Metro PD', 'house': 'apartment', 'name': 'Debra Morgan'}
+```
+> NOTE: Notice how the second dictionary object is left untouched while the calling dictionary gets modified. Also notice that if the key did not exist before, it gets added to the dictionary, and if it did exist already, the value gets overwritten.
+
+#### `.clear()`
+This simply empties the dictionary.
