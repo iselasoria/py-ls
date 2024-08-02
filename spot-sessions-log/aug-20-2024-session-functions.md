@@ -1,11 +1,11 @@
 # Functions
 Date: 08-02-2024
 
-| Left columns  | Right columns |
+
 | :-----------: |:-------------:|
 | Date          | 08-02-2024    |
-| Atendees      | Baur, Lionel, Rosie |
-| left baz      | right baz     |
+| Atendees      | Baur, ~~Lionel~~, Rosie, Wonnie |
+
 
 ---
 ---
