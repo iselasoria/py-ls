@@ -110,6 +110,5 @@ print(pp_list)
 def is_prime(num):
 	if num == 1:
 		return False
-	
 	return all(num % divisor != 0 for divisor in range(2, num))
 ```

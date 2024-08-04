@@ -1,3 +1,4 @@
+#fundamentals 
 ## `len()`
 The `len()` method can be used to determine the list of a collection, such as a [[lists]].
 

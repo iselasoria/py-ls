@@ -1,3 +1,4 @@
+#fundamentals 
 #### `.count`
 Used to count the presence of an element in the tuple. If not present, `.count()` will return `0`.
 

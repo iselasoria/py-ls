@@ -1,3 +1,4 @@
+#fundamentals 
 Built-in methods are simply methods we don't have to import any module in order to use them. 
 
 #### `sum()`

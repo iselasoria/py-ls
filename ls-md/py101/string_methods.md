@@ -1,4 +1,4 @@
-#fundamentals #strings
+#fundamentals 
 ## `interpolation`
 String interpolation is possible through `f-strings`.  String interpolation with f-strings is one way python does [[implicit_coercion]]. In the case of the integer referenced by variable `age`, when 
 The construction of an f-string is as follows:

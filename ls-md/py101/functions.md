@@ -1,3 +1,4 @@
+#fundamentals 
 Functions are snippets of standalone code that can be reused. They are used to break up larger programs into more modular units. They can be defined with or without [[parameters]]. 
 
 By default, a function will return [[None]],  this is called _implicit return_.

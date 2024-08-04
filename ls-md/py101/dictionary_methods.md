@@ -1,4 +1,4 @@
-
+#fundamentals 
 ```python
 student = {
 	'name' : 'Rosa Isela',
@@ -157,5 +157,46 @@ print(places) # {'work': 'Miami Metro PD', 'house': 'apartment', 'name': 'Debra 
 ```
 > NOTE: Notice how the second dictionary object is left untouched while the calling dictionary gets modified. Also notice that if the key did not exist before, it gets added to the dictionary, and if it did exist already, the value gets overwritten.
 
+#### `|     the merge operator`
+The merge operator, `|` works similarly to `.update()` but the difference is using the merge operator returns a _new_ merged dictionary.
+```python
+person = {
+
+	"name": "Deb",
+	
+	"age": 30,
+	
+	"occupation": "detective",
+	
+	"personality": "outgoing",
+	
+	"siblings": "Dexter Morgan"
+
+}
+
+  
+
+places = {
+
+	"work" : "Miami Metro PD",
+	
+	"house" : "apartment",
+	
+	"name" : "Debra Morgan"
+}
+
+print(person) #  {'name': 'Deb', 'age': 30, 'occupation': 'detective', 'personality': 'outgoing', 'siblings': 'Dexter Morgan'}
+
+print()
+
+merged_info_dict = person | places
+
+print(merged_info_dict) # {'name': 'Debra Morgan', 'age': 30, 'occupation': 'detective', 'personality': 'outgoing', 'siblings': 'Dexter Morgan', 'work': 'Miami Metro PD', 'house': 'apartment'}
+print()
+print(person) # {'name': 'Deb', 'age': 30, 'occupation': 'detective', 'personality': 'outgoing', 'siblings': 'Dexter Morgan'}
+```
+
+#### `|=   the update operator 
+The update operator works exactly like the method `.update()`
 #### `.clear()`
 This simply empties the dictionary.
