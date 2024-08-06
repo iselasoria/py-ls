@@ -1,3 +1,4 @@
+#fundamentals 
 ### Dataset to be used:
 ```python
 ls_cats = frozenset(["Beemo","Quica","Cheddar","Beemo","Pudding","Cocoa","Burbus","Gotita","Espumin"])
