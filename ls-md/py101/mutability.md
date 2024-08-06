@@ -1,6 +1,6 @@
 #fundamentals 
 Mutability refers to whether an object can be changed. 
-Mutable date types such as [[lists]], [[dictionary]], or [[sets]], can be altered in place.
+Mutable date types such as [[lists]], [[dictionary]], or [[set]], can be altered in place.
 When we change mutable objects, we are altering their state but we are not changing their [[identity]].
 
 ```python

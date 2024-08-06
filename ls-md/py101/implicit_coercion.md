@@ -19,14 +19,14 @@ If we want to get an integer we must use the integer division [[operators#intege
 
 This table shows how Python coerces types when performing operations on them.
 
-| Operand 1      | Operand B       | Resulting Type  |
-| :-------------:|:---------------:|:---------------:|
-| `int`          |      `float`    |     `float`     |
-| `int`          |    `Decimal`    |    `Decimal`    |
-| `int`          | `Fraction`      |  `Fraction`     |
-| `float`        | `Decimal`       |  `--error--`    |
-| `float`        | `Fraction`      |  `float`        |
-| `Decimal`      | `Fraction`      |  `--error--`    |
+| Operand 1 | Operand B  | Resulting Type |
+| :-------: | :--------: | :------------: |
+|   `int`   |  `float`   |    `float`     |
+|   `int`   | `Decimal`  |   `Decimal`    |
+|   `int`   | `Fraction` |   `Fraction`   |
+|  `float`  | `Decimal`  |  `--error--`   |
+|  `float`  | `Fraction` |    `float`     |
+| `Decimal` | `Fraction` |  `--error--`   |
 
 
 
