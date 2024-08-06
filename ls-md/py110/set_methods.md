@@ -46,7 +46,7 @@ print(invitations) # set()
 
 
 #### `.union() / |` 
-The union operator allows us to combine elements from two [[sets]] while keeping the two initial sets untouched. 
+The union operator allows us to combine elements from two [[set]] while keeping the two initial sets untouched. 
 ```python
 # these both do the same
 invitations = xelas_friends | ryans_friends
