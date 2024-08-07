@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"8e1ebb2d0de5dade","type":"group","x":-560,"y":-60,"width":880,"height":600,"label":"Custom Sorting"},
+		{"id":"ba121c9e7631f4ff","type":"text","text":"##### First-Class Objects","x":-80,"y":0,"width":360,"height":60,"color":"5"},
+		{"id":"8cf90ed9ef68e42d","x":-80,"y":100,"width":360,"height":200,"color":"5","type":"file","file":"py110/first_class_objects.md"},
+		{"id":"bb933de7f510a5d0","type":"text","text":"##### Higher-Order Functions\n","x":-520,"y":0,"width":380,"height":60,"color":"6"},
+		{"id":"dad7db90651ce3f6","x":-520,"y":100,"width":380,"height":200,"color":"6","type":"file","file":"py110/higher_order_functions.md"}
+	],
+	"edges":[
+		{"id":"ea614d6d3a2c617b","fromNode":"bb933de7f510a5d0","fromSide":"right","toNode":"ba121c9e7631f4ff","toSide":"left"},
+		{"id":"7a10e20deed726d3","fromNode":"ba121c9e7631f4ff","fromSide":"left","toNode":"bb933de7f510a5d0","toSide":"right"}
+	]
+}
