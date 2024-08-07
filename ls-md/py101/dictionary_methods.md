@@ -48,7 +48,6 @@ We could instead use `.get()` which will retrieve the value at the key if it exi
 print(student.get('study_buddy')) # None
 ```
 
-#### `.setdefault()`
 
 #### `del`
 The delete statement. `del` is used to remove a key value pair from a [[dictionary]].
