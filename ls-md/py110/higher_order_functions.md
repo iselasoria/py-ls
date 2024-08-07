@@ -1,0 +1,1 @@
+These are [[functions]] that can accept other functions as arguments, or that [[return]] other functions. 
