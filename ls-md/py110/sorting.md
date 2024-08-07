@@ -66,6 +66,27 @@ print(sorted_animals)     # ["Cat", "dog", "monkey", "ZEBRA"]
 ```
 
 #### Custom Sorting Example:
+Sort the following list by weight first, then by name:
+
 ```python
-INSERT_EXAMPLE_HERE
+cats = [("Burbus", 9),("Gotita", 8),("Espumin", 7)]
+```
+
+We first need the custom function that will determine the ordering. We unpack the [[tuple]] and return in the order we want-- weight, then name:
+```python
+def weight_then_name(info):
+	name, weight = info
+	return (weight, name)
+```
+
+Lastly, we pass it to the `.sorted()` method:
+```python
+custom_sorted_cats = sorted(cats, key=weight_then_name)
+print(custom_sorted_cats) # [('Espumin', 7), ('Gotita', 8), ('Burbus', 9)]
+```
+
+We can add the `reverse` keyword to get the list with the same custom logic, but in descending order:
+```python
+custom_sorted_cats = sorted(cats, key=weight_then_name, reverse=True)
+print(custom_sorted_cats) # [('Burbus', 9), ('Gotita', 8), ('Espumin', 7)]
 ```
