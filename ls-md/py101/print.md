@@ -1,5 +1,5 @@
 #fundamentals 
-The print function is a built-in function that allows us to print objects to the screen. `print()` uses [[implicit_coercion]] to coerce everything to [[strings]].
+The print function is a [[built_ins]] function that allows us to print objects to the screen. `print()` uses [[implicit_coercion]] to coerce everything to [[strings]].
 
 ```python
 age = 33
