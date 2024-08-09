@@ -31,6 +31,7 @@ def get_manager(company):
 
     return managers
 
+managers = [person['name'] for dpt in company for person in company[dpt] if person['position'] == 'manager']
 
 print(get_manager(company))
 
