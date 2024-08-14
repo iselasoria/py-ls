@@ -1,6 +1,7 @@
 ignore-me-please/
 
 .DS_Store
+.vscode/
 /assessment-prep/*
 exercises/ta-sessions/*
 /ls-md/.obsidian/*
