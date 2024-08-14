@@ -162,25 +162,17 @@ The merge operator, `|` works similarly to `.update()` but the difference is usi
 person = {
 
 	"name": "Deb",
-	
 	"age": 30,
-	
 	"occupation": "detective",
-	
 	"personality": "outgoing",
-	
 	"siblings": "Dexter Morgan"
-
 }
 
   
 
 places = {
-
 	"work" : "Miami Metro PD",
-	
 	"house" : "apartment",
-	
 	"name" : "Debra Morgan"
 }
 

@@ -6,7 +6,7 @@ ls_cats = frozenset(["Beemo","Quica","Cheddar","Beemo","Pudding","Cocoa","Burbus
 xelas_cats = frozenset(["Burbus","Gotita","Espumin","Clovis","Molonchita"])
 ```
 
-#### `.union() | /`
+#### `.union() / |`
 `.union()` combines two [[frozenset]] into a new object of the same type. These both do the same:
 
 ```python
