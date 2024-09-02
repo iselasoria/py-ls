@@ -52,6 +52,17 @@ def gen_subs(str):
     return substrings
 ```
 
+## Substrings with a comprehension
+```python
+string = 'madam'
+
+
+def gen_subs(string):
+    return [string[start_idx:end_idx + 1]for start_idx in range(0, len(string)) for end_idx in range(start_idx, len(string))]
+
+print(gen_subs(string))
+```
+
 ## Counting occurrences of a letter
 ```python
 statement = "The Flintstones Rock"
@@ -112,4 +123,16 @@ def is_prime(num):
 	if num == 1:
 		return False
 	return all(num % divisor != 0 for divisor in range(2, num))
+```
+
+## alphabet positions
+```python
+def positions(ltr, idx):
+    pos = list(range(1, 27))
+    letters = [chr(p + 96) for p in pos]
+    alpha_pos = dict(zip(letters, pos))
+
+    if alpha_pos[ltr] == idx + 1:
+        return True
+    return False
 ```
