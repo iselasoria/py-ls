@@ -12,3 +12,11 @@ For example, in Python, there are values that evaluate as _falsey_:
 |                                                     |  `None`  |
 |                                                     |   `0`    |
 |                                                     |  `0.0`   |
+
+```python
+print(any([])) # False
+# Notice in the snippet above, `any` returns _False_ because, there are no elements and therefore none are truthy.
+
+print(all([])) # True
+# By contrast, in this snipet the `all` function returns _True_ because none of the elements are falsey, so therefore all are truthy.
+```
