@@ -116,3 +116,6 @@ print()
 print(dir())
 ```
 
+## identifier scope
+[[parameters]] are local [[variables]].
+[[functions]] names can be local or global, depending on where the function is defined.

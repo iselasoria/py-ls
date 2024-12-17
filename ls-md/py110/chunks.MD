@@ -136,3 +136,27 @@ def positions(ltr, idx):
         return True
     return False
 ```
+
+# come back to this
+>>> number = 4936
+>>> ones = number % 10
+>>> ones
+6
+
+>>> number = number // 10
+493
+
+>>> tens = number % 10
+>>> tens
+3
+
+>>> number = number // 10
+49
+
+>>> hundreds = number % 10
+>>> hundreds
+9
+
+>>> thousands = number // 10
+>>> thousands
+4
