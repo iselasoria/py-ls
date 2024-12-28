@@ -33,3 +33,9 @@ while a <= 10:
 # We are counting up to 10: 9
 # We are counting up to 10: 10
 ```
+
+## Ternary Expressions
+Allow us to choose between two values. They eliminate wordiness and are particularly useful when handling missing data:
+```python
+value1 if condition else value2
+```
