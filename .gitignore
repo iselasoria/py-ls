@@ -6,3 +6,5 @@ ignore-me-please/
 exercises/ta-sessions/*
 /ls-md/.obsidian/*
 /ls-md/.obsidian/graph.json
+ls-md/.obsidian/workspace.json
+ls-md/.obsidian/core-plugins.json
